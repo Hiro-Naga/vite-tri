@@ -1,4 +1,4 @@
-## webpack と　 vite の比較用
+## webpack と viteの比較用
 - react
 - typescript
 - webpack
