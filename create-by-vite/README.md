@@ -1,5 +1,6 @@
-## vite/webpack 比較用
+## vite/webpack 比較用プロジェクト①
 移行から行うのではなく、viteのコマンドでプロジェクトを作成したもの
+中身そのままなのでコード上の差が多少はあるかもしれない
 
 ### 環境構築
 ```sh
@@ -10,6 +11,7 @@ npm init vite@latest create-by-vite -- --template react-ts
 - 起動が凄まじく早い
   `npm run dev`にて計測
   > VITE v4.0.2  ready in 541 ms
+  何度か実行しているが300ms台が多い
 - コマンド一つである程度の環境ができる
   上記。webpackであれば(Angular等内蔵であればともかく)他にコマンドが必要になりうる
 
