@@ -1,4 +1,5 @@
-## webpack と viteの比較用
+## webpack と viteの比較用プロジェクト②
+reactにwebpackを入れたものを作成し、その後viteに移行する
 - react
 - typescript
 - webpack
@@ -14,3 +15,8 @@ npx create-react-app vite-tri --template typescript
 ```sh
 npm install --save-dev webpack
 ```
+
+### 実行時間計測
+- 移行前
+  `time npm run build`で実行
+  > npm run build  11.40s user 1.44s system 143% cpu 8.938 total

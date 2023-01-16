@@ -12,6 +12,9 @@ npm init vite@latest create-by-vite -- --template react-ts
   `npm run dev`にて計測
   > VITE v4.0.2  ready in 541 ms
   何度か実行しているが300ms台が多い
+  `time npm run build`にて計測
+  > npm run build  3.88s user 0.33s system 142% cpu 2.949 total
+  少なくとも体感で感じられる程度には早い
 - コマンド一つである程度の環境ができる
   上記。webpackであれば(Angular等内蔵であればともかく)他にコマンドが必要になりうる
 
