@@ -20,3 +20,5 @@ npm install --save-dev webpack
 - 移行前
   `time npm run build`で実行
   > npm run build  11.40s user 1.44s system 143% cpu 8.938 total
+- 移行後
+  ※ 実際に移行した後に追記

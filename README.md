@@ -9,6 +9,6 @@ vite / webpack 比較用リポジトリ
   ```
 - vite-tri
 
-  reactプロジェクトにwebpackを導入し、viteに移行シミュレーション<br />
+  reactプロジェクトにwebpackを導入し、viteに移行するシミュレーションプロジェクト<br />
   ※ `create-react-app`にてts環境を作成したため、最初からwebpackがdependenciesには含まれている
   
