@@ -1,4 +1,4 @@
-import './test.component.css';
+import './image.component.css';
 // import reactLogo from './assets/react.svg';
 
 export function Test() {

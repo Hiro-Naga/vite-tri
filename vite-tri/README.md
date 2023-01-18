@@ -39,12 +39,18 @@ vite<br>
 src以下をdistに出力
 
 ### ビルド時間計測
-
+`time npm run build~`で計測
+- webpack
+  > npm run build-webpack  7.02s user 0.62s system 133% cpu 5.708 total
+- vite
+  > npm run build-vite  4.14s user 0.32s system 155% cpu 2.874 total
+ぺら紙1枚構成でもこれだけ違うため、規模が大きくなるほどさらに差が開いていく。
 
 ### 雑感
 - フレームワークの便利さ
-  1からwebpackの設定を指定する段階で項目数が多すぎてめんどかった
-- 謎エラー一覧
+  1からwebpackの設定を指定する段階で項目数が多すぎてめんどかった。フレームワークが勝手にやってくれる便利さが身に沁みる。<br>
+  一方、viteはplugin1行だけであり、loaderに気を使う必要もないので非常に触りやすい。
+- 発生謎エラー一覧
   1. tsconfig
     > 構成ファイル '/Users/nagasawa/Desktop/自作/vite-tri/vite-tri/tsconfig.json' で入力が見つかりませんでした。指定された 'include' パスは '["src"]' で、'exclude' パスは '["node_modules","**/*.spec.ts"]' でした
 
@@ -69,3 +75,8 @@ src以下をdistに出力
   4. 画像のインポート
     相対/絶対パスでなぜか読み込めない。import文も`<img src="xxxx">`等もダメである<br>
     おそらくlocalhost:8080側のディレクトリを見に行ってるのだと思うが、tsconfigに記述したrootの再指定(baseUrl、paths)あたりが効いていないような気がする。
+
+  5. viteのoutput先
+    なぜかsrc以下に追加される<br>
+    create-by-viteではdist以下であり、またoutDirという出力先を指定するオプションがあるとのことだが、default値がdistになっているし指定したところで結果が変わらなかったため不明。<br>
+    webpackと並行して入れてるせいかもしれないが同様の事例すら見つからず。

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Test } from './test/test.component';
+import { Test } from './image/image.component';
 
 type Props = {};
 
