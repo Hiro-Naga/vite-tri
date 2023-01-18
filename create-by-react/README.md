@@ -9,7 +9,7 @@ create-react-appで作ったものであり、内蔵のものの場合の時間�
 ### 環境構築
 - create react/ts project
 ```sh
-npx create-react-app vite-tri --template typescript
+npx create-react-app create-by-react --template typescript
 ```
 
 - install webpack(※ built-in)
