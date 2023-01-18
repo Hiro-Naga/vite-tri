@@ -27,8 +27,9 @@ npm install --save-dev webpack webpack-cli ts-loader style-loader css-loader htm
 
 - vite関連
 ```sh
+npm install --save-dev vite @vitejs/plugin-react
 ```
-webpack同様、ts+cssを使えるように構成する
+※ webpack同様、ts+cssを使えるように構成する
 
 #### 構成
 package.json: node構成を記述<br>
