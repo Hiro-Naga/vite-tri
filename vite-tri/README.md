@@ -74,7 +74,8 @@ src以下をdistに出力
 
   4. 画像のインポート
     相対/絶対パスでなぜか読み込めない。import文も`<img src="xxxx">`等もダメである<br>
-    おそらくlocalhost:8080側のディレクトリを見に行ってるのだと思うが、tsconfigに記述したrootの再指定(baseUrl、paths)あたりが効いていないような気がする。
+    svgが型指定できていないためであるらしく、`custom.d.ts`を作成した後tsconfigで読み込むようにして対応。<br>
+    next.jsでも内部でsvgをanyとして設定していたりするらしいので同様の処理が必要かもしれない。
 
   5. viteのoutput先
     なぜかsrc以下に追加される<br>
