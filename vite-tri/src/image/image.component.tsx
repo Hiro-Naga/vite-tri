@@ -6,7 +6,7 @@ export function Test() {
     <>
       <div>
         <span>css/画像 読み込みチェック用コンポーネント</span><br />
-        <span><img className="react-logo" src={reactLogo.name} /></span>
+        <span><img className="react-logo" src={reactLogo.toString()} /></span>
         {/* <span><img className="react-logo" src='../assets/react.svg' /></span> */}
       </div>
     </>
