@@ -39,11 +39,12 @@ vite<br>
 src以下をdistに出力
 
 ### ビルド時間計測
-`time npm run build~`で計測
+`time npm run build ~`で計測
 - webpack
   > npm run build-webpack  7.02s user 0.62s system 133% cpu 5.708 total
 - vite
   > npm run build-vite  4.14s user 0.32s system 155% cpu 2.874 total
+
 ぺら紙1枚構成でもこれだけ違うため、規模が大きくなるほどさらに差が開いていく。
 
 ### 雑感
@@ -51,6 +52,11 @@ src以下をdistに出力
   1からwebpackの設定を指定する段階で項目数が多すぎてめんどかった。フレームワークが勝手にやってくれる便利さが身に沁みる。<br>
   一方、viteはplugin1行だけであり、loaderに気を使う必要もないので非常に触りやすい。<br>
   また、何も設定していないがデフォルトでホットリロードが実装されている。
+- 画像のインポート
+  `<import>`で試していた例があったためチャレンジ。<br>
+  相対/絶対パスでなぜか読み込めない。`<img src="path">`で指定するのは通常通り可能<br>
+  svgが型指定できていないためであるらしく、`custom.d.ts`を作成した後tsconfigで読み込むようにして対応。<br>
+  next.jsでも内部でsvgをanyとして設定していたりするらしいので同様の処理が必要かもしれない。<br>
 - 発生謎エラー一覧
   1. tsconfig
     > 構成ファイル '/Users/nagasawa/Desktop/自作/vite-tri/vite-tri/tsconfig.json' で入力が見つかりませんでした。指定された 'include' パスは '["src"]' で、'exclude' パスは '["node_modules","**/*.spec.ts"]' でした
@@ -73,13 +79,7 @@ src以下をdistに出力
     tsconfigから削除することで解消できる。
     create-react-app、create-by-vite共に`noEmit: true`の指定があったため、何か差があると思われる。
 
-  4. 画像のインポート
-    `<import>`で試していた例があったためチャレンジ。<br>
-    相対/絶対パスでなぜか読み込めない。`<img src="path">`で指定するのは通常通り可能<br>
-    svgが型指定できていないためであるらしく、`custom.d.ts`を作成した後tsconfigで読み込むようにして対応。<br>
-    next.jsでも内部でsvgをanyとして設定していたりするらしいので同様の処理が必要かもしれない。<br>
-
-  5. viteのoutput先
+  4. viteのoutput先
     なぜかsrc以下に追加される<br>
     create-by-viteではdist以下であり、またoutDirという出力先を指定するオプションがあるとのことだが、default値がdistになっているし指定したところで結果が変わらなかったため不明。<br>
     webpackと並行して入れてるせいかもしれないが同様の事例すら見つからず。
