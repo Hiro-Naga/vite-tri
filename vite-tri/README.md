@@ -73,7 +73,8 @@ src以下をdistに出力
     create-react-app、create-by-vite共に`noEmit: true`の指定があったため、何か差があると思われる。
 
   4. 画像のインポート
-    相対/絶対パスでなぜか読み込めない。import文も`<img src="xxxx">`等もダメである<br>
+    `<import>`で試していた例があったためチャレンジ。<br>
+    相対/絶対パスでなぜか読み込めない。`<img src="path">`で指定するのは通常通り可能<br>
     svgが型指定できていないためであるらしく、`custom.d.ts`を作成した後tsconfigで読み込むようにして対応。<br>
     next.jsでも内部でsvgをanyとして設定していたりするらしいので同様の処理が必要かもしれない。
 
