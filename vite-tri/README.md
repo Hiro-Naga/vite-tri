@@ -1,5 +1,5 @@
 ## webpack と viteの比較用プロジェクト③
-reactにwebpackを入れたものを作成し、その後viteに移行する
+reactにwebpackを入れたものを作成し、その後viteに移行する<br>
 ブラックボックスを作らないよう作成するためcreate-react-appを使わず、1からreact・webpack・viteを入れていく
 
 ### 環境

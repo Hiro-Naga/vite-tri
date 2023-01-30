@@ -1,5 +1,5 @@
 ## webpack と viteの比較用プロジェクト②
-reactにwebpackを入れたものを作成し、その後viteに移行する
+reactにwebpackを入れたものを作成し、その後viteに移行する<br>
 create-react-appで作ったものであり、内蔵のものの場合の時間計測用に作成
 - react
 - typescript
